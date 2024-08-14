@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="this is an assignment as part of a web-dev course"/>
+  <meta name="robots" content="noindex, nofollow">
+  <script src="https://kit.fontawesome.com/6b3bed114c.js" crossorigin="anonymous"></script>
+  <!--link rel="icon" href="images/lightBulb.jpg" type="image/x-icon"-->
+  <link rel="canonical" href="file:///C:/Users/makon/Desktop/protfolio/connections.html"/>
+  <title>connections assignment</title>
+  <style>
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    .card {
+    /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s; 
+    }
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>this is a landing page for a photography business</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#testimonials">testimonials</a></li>
+                <li><a href="#more_photos">testimonials</a></li>
+                <li><a href="#contact">contact form</a></li>
+            </ul>
+        </nav>   
+    </header>
+
+    <main>
+        <section id="home">
+                <p>
+                    <h1>this is the title of the page</h1>
+                    <h2>It is a business page of a photographer</h2>
+                    <img src="./images/trees.jpg" width="100px" alt="picture of tree">
+                    <img src="./images/tree2.jfif" width="100px" alt="picture of tree">
+                    <img src="./images/tree3.jfif" width="100px" alt="picture of tree">
+                </p>
+        </section>
+
+        <section id ="#more_photos">
+                <p>
+                    you can see more from my work here:
+                    <br>
+                    <a href="../protfolio/photo1.html">if u miss NY</a>
+                    <br>
+                    <a href="../protfolio/photo2.html">if u miss outdoors</a>
+                </p>
+        </section>
+
+        <section id="testimonials">
+            <div>
+                <div class="card">
+                    <img src="images/c1.png" alt="customer 1 pic" style="width:100%">
+                        <div>
+                            <h4><b>John Doe</b></h4>
+                            <p>did a great jon on the my wedding</p>
+                        </div>
+                  </div>
+            </div>
+            <div>
+                <div class="card">
+                    <img src="images/c2.png" alt="customer 2 pic" style="width:100%">
+                        <div class="container">
+                            <h4><b>betty Doe</b></h4>
+                            <p>brilliant photographer</p>
+                        </div>
+                  </div>
+                  <div>
+                    <div class="card">
+                        <img src="images/c3.png" alt="customer 3 pic" style="width:100%">
+                            <div>
+                                <h4><b>micha Doe</b></h4>
+                                <p>best photographer ever</p>
+                            </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+    </main>  
+
+    <form action="/submit" method="POST" id="contact">
+        <legend>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your name" required maxlength="30">
+                <br>
+                <label for="phone">phone:</label>
+                <input type="tel" id="phone" name="phone" min="0" placeholder="Enter your phone" required maxlength="11">
+                <br>
+                <label for="email">email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email" required maxlength="40">
+                <br>
+                <label for="volume">price range:</label>
+                <input type="range" id="volume" name="volume" min="1000" max="5000">
+                <br>
+                <input type="submit" value="Submit">
+         </legend>
+    </form>
+
+    <p>jump up to <a href=#home">home page</a></p>
+    <footer>             
+        <p>
+            <h3>israel israeli
+                <br>
+                Tel-Aviv
+            </h3>
+            <ul>
+                    <li><a href="https://www.facebook.com" target="_blank" alt="my facebook"><span class="fa-brands fa-facebook-f"></span></a></li>
+                    <li><a href="./MyProtfolio_ToBe.html" target="_blank" alt="my protfolio"><span class="fa-sharp fa-solid fa-brush"></span></a></li>
+            </ul>
+       </p>
+        <p>&copy; 2024 My Website</p>
+     </footer>
+</body>
+</html>
+

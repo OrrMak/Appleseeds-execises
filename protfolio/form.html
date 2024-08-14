@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML - Forms</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h2>Create an Account</h2>
+        </header>
+        
+        <!-- Email Input -->
+        <form action="/submit" method="POST">
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email" required>
+             <!-- Password Input -->
+            <br>
+            <br>
+            <label for="Passwrd">Password:</label>
+            <br>
+            <input type="password" id="password" name="password" required minlength="8">
+            <br>
+            <br>
+           <!-- Select Dropdown -->
+            <label for="age">Age:</label>
+            <br>
+            <select id="age" name="age" required>
+                <option value="" disabled selected>Select Age</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+            </select>
+            <br>
+            <br>
+            <!-- Textarea -->
+            <label for="bio">Tel us a little about yourself:</label>
+            <br>
+            <textarea id="bio" name="bio" rows="4" cols="50"></textarea>
+            <br>
+            <br>
+            <!-- Checkbox -->
+            <input type="checkbox" id="terms" name="terms" checked required>
+            <label for="terms">I agree to the <a href="#">terms of service</a></label>
+            <br>
+            <br>
+            <!-- Submit Button -->
+            <input type="submit" value="sign up">
+        </form>
+</body>
+
+</html>
