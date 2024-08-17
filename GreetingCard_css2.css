@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(227, 219, 219);
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.greeting-card{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #fbf6f6; /* Solid border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding: 50px 50px;
+    max-width: 450px;
+    text-align: center; /* Center text inside the card */
+    margin-top: 70px; 
+}
+header{
+    margin-bottom: 25px;
+    font-size: x-large;
+}
+.message{
+    margin: 0; /* Remove default margin for the paragraph */
+    font-size: 16px; /* Font size for the message */
+    color: #555;
+}

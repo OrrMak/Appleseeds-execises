@@ -1,0 +1,25 @@
+body {
+    background: linear-gradient(to left, lightblue,rgb(186, 149, 26))
+}
+
+.quote{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.section{
+    font-size: x-large;
+    border: 1px solid black;
+    border-radius: 10px;    
+    padding: 30px;           
+    max-width: 4000px;         
+    text-align: center;
+    margin-top: 150px;
+}
+
+.section p cite{
+    background: none;
+    padding: 10px;
+}

@@ -1,0 +1,62 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    color: coral;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p   {
+    margin: 20px 0;
+}
+.header{
+    background-color: coral;
+    padding: 40px;
+}
+.BarMenu{
+    display: flex;
+    margin: 0;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.BarMenu a {
+    font-size: 20px; 
+    color: black;
+}
+.main{
+    display: flex;
+    gap: 70px;
+    padding: 14px;
+}
+.main section{
+    flex: 1;
+}
+.main aside{
+    width: 300px;
+}
+.main aside h3{
+    padding: 10px;
+    background-color: coral;
+    color: #fff;
+    margin-bottom: 0;
+}
+.main aside li{
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ccc;
+}

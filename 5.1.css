@@ -1,0 +1,17 @@
+.div1{
+    
+        border: 1px solid red;      /* Adds a thin, red border */
+        font-size: 1.2em;           /* Increases the font size (adjust the value as needed) */
+        border-radius: 8px;         /* Gives it rounded corners (adjust the value as needed) */
+       
+}
+.div2{
+    font-weight: bold;   /* Makes the font bold */
+    font-style: italic;  /* Makes the font italic */
+}
+.div3{
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}

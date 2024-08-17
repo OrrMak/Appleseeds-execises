@@ -1,0 +1,42 @@
+.card {
+    width: 400px; 
+    height: 400px; 
+    border-radius: 0px; 
+    overflow: hidden;
+    display: flex; /*gives characters to the children such as alignment*/
+    flex-direction: column;
+    margin:0;
+    padding: 0;
+}
+.cardImage{
+    height: 60%;
+    background-image: url(./golan.jpg);
+    background-size: contain; /* it adjusts the size of the background image so that it is fully visible within the element's background area while maintaining its aspect ratio.*/
+    background-repeat: no-repeat; /*ensuring that the background image is only displayed once.*/
+    background-size: cover; /*it covers the entire background area of an element*/
+    margin: 0%;
+    padding: 0px;
+    margin-bottom: 0px;
+}
+/* Bottom half with text */
+.cardContent {
+    height: 40%; /* Takes up the remaining half of the card's height */
+    background-color: rgb(215, 215, 154); /* Background color for the text area */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*Center text vertically */
+}
+.cardHeader{
+  margin-top: -50px;
+  color: black;  
+  line-height: 1.2%;
+}
+.h2{
+    margin-top: 5px;
+    font-weight: 100;
+}
+.cardLinks a
+{
+    color: burlywood; /* Text color */
+    flex-direction: row; /* Align children in a row */
+}
