@@ -1,0 +1,133 @@
+body{
+    background-color: rgb(132, 183, 228);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button{
+    margin: 10px;
+    padding: 10px 20px; /* button size */
+    font-size: 16px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100vh; */
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flatReg{
+    background-color: rgb(53, 149, 212);
+    border-radius: 0;
+    color: white;
+    border: none;
+    padding: 20px;
+}
+
+.flatReg:hover {
+    background-color: rgb(30, 130, 200); 
+.flatSub{
+    background-color: rgb(241, 207, 85);
+    border-radius: 0;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    font-size: 0.75em; 
+}
+
+.flatSub:hover {
+    background-color: rgb(243, 243, 176);
+}
+
+/*--------------------------------*/
+
+.roundReg{
+    background-color: rgb(102, 196, 76);
+    border-radius: 30px;
+    color: white;
+    border: none;
+    padding: 20px;
+}
+
+.roundReg:hover {
+    background-color: rgb(148, 226, 125); 
+}
+
+.roundSub{
+    background-color: rgb(231, 84, 86);
+    border-radius: 30px;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    font-size: 0.75em; 
+}
+
+.roundSub:hover {
+    background-color: rgb(235, 164, 176);
+}
+
+/*---------------------------------*/
+.flatGhost{
+    border: 15px;
+}
+.flatGhostReg{
+    border-radius: 5px;
+    border: width 4px;
+    border-color: rgb(241, 10, 10);
+    color: white;
+    padding: 20px;
+    background: transparent;
+}
+
+.flatGhostReg:hover {
+    background-color: rgb(238, 25, 10); 
+}
+
+.flatGhostsub{
+    border-color: rgb(199, 134, 229);
+    border: width 4px;
+    background: transparent;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5em;
+    font-size: 0.75em; 
+}
+
+.flatGhostsub:hover {
+    background-color: rgb(208, 40, 183);
+}
+/*---------------------------------*/
+.roundGhostReg{
+    border-radius: 30px;
+    border: width 4px;
+    border-color: rgb(222, 241, 13);
+    color: white;
+    padding: 20px;
+    background: transparent;
+}
+
+.roundGhostReg:hover {
+    background-color: rgb(230, 227, 95); 
+}
+
+.roundGhostsub{
+    border-color: rgb(22, 168, 19);
+    border: width 4px;
+    background: transparent;
+    border-radius: 30px;
+    color: white;
+    padding: 0.5em;
+    font-size: 0.75em; 
+}
+
+.roundGhostsub:hover {
+    background-color: rgb(122, 228, 121);
+}

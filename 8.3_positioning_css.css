@@ -1,0 +1,38 @@
+
+div{
+    border: 1px solid black;
+    border-radius: 0;
+    height: 100vh;  
+    width: 100%;
+}
+.one{
+    display: flex;
+    height: 50vh;  
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.div1{
+    position: relative;
+}
+.div2{
+    position:absolute;
+    height:30vh; 
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 20%;
+}
+
+
+.div1{
+    height: 40%;
+    width: 40%;
+    text-align: left;
+}
+.div1{
+    height: 40%;
+    width: 40%;
+    text-align: left;
+}
+

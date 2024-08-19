@@ -1,0 +1,18 @@
+
+#outer{
+    position: relative;
+    background-color: rgb(43, 99, 77);  
+    width: 50vw; /* Full viewport width */
+    height: 50vh; /* Full viewport height */
+
+}
+#title{
+    position: relative;
+}
+#inner{
+    position: absolute;
+    background-color: rgb(179, 211, 131);
+    width: 50%;
+    height: 45%;
+    margin-top: 10px;
+}
