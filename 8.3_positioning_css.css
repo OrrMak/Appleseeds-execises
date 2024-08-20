@@ -1,38 +1,45 @@
 
 div{
-    border: 1px solid black;
+    border: 3px solid black;
     border-radius: 0;
     height: 100vh;  
     width: 100%;
+    text-align: left;
 }
 .one{
     display: flex;
-    height: 50vh;  
-    width: 50%;
+    height: 30vh;  
+    width: 30%;
     margin: 0;
     padding: 0;
     position: relative;
 }
 .div1{
     position: relative;
+    height:40vh; 
+    width: 80%;    /* margin-bottom: 30px; */
 }
 .div2{
     position:absolute;
-    height:30vh; 
-    width: 50%;
-    margin-left: 20%;
-    margin-top: 20%;
+    height:40vh; 
+    width: 80%;
+    margin-left: 35%;
+    margin-top: 35%;
+} 
+
+.div3{
+    /* position: relative; */
+    height: 30vh;
+    width: 100%;
+    margin-top:190px;
 }
 
-
-.div1{
+.div4{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    margin-right: 0%;
     height: 40%;
     width: 40%;
-    text-align: left;
+    text-align: left;  
 }
-.div1{
-    height: 40%;
-    width: 40%;
-    text-align: left;
-}
-
