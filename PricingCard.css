@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 600;
+    line-height: 1.6;
+    background-color: #27264b;
+    color: #433f63
+}
+a{
+    text-decoration: none;
+    color: #007bff;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin-bottom: 1%; /*mine*/
+}
+
+.container{
+    max-width: 90%; /*mine*/
+    background-color: #f8fafe ; 
+    border-radius: 10px;
+    margin: 20% auto;
+    padding: 70px 60px; /*note to myself*/
+}
+
+.pricing{
+    display:flex;
+    justify-content: space-around;
+    gap: 1.5%;
+    flex-wrap: wrap;
+
+    /* Card */
+}
+.card{
+    flex:1;
+    background-color: white;
+    border-radius: 8px;
+    padding: 2%;
+    box-shadow: 0 4px 6px; /*?*/
+    text-align: center;
+    /*add margin*/
+}
+
+.card h2{
+    font-size:larger; /*?*/
+    text-transform: uppercase;
+    /* add margin-bottom */
+    /* add padding */
+    color:#333;
+    background-color: #eaedf3;
+}
+
+.card-pro h2 {
+    background-color: #f8fafe;
+    background: radial-gradient(circle, rgb(107, 78, 210) 0%, rgb(192, 216, 244) 100%);
+}
+.card-enterprise h2{
+    background-color: #f8fafe;
+    background: radial-gradient(circle, rgb(234, 78, 128) 0%, rgb(255, 255, 144) 100%);
+} 
+
+/* Price */
+.card .price{
+    font-size: 45px;  /*adjust?*/
+    font-weight: 700;
+    margin-bottom: 20px; /*adjust?*/
+}
+.card .price sup{
+    font-size:18px;
+    position: relative;
+    left: -5px;
+}
+.card .price span{
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.card .main-text{
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    /* display: block; */
+    background-color: #fff;
+    color: #27264b;
+    border: 1px solid #27264b;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    /* text-align: center;  */
+}
+
+.btn:hover, .btn-primary{
+    background-color:  #27264b;
+    color: white;
+}
+
+.btn-primary:hover{
+    background-color: white;
+    color: #27264b;
+}
+
+/*Lists*/
+.card ul{
+    text-align: left;
+    margin-top: 10%;
+}
+.card ul li i {
+    color: #98ca9e;
+    margin-right: 10px;
+}
