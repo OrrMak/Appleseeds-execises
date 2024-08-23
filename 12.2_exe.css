@@ -1,0 +1,21 @@
+p{
+    background-color: purple;
+    width: 50%;
+    height: 50vh;
+    /* z-index: -1; */
+    position: relative;
+    display: flex;
+    justify-content: flex-end; /*cause i wanted the purple to be "first" making the after "after"*/
+}
+
+p::after{
+    content: '';
+    background-color: green;
+    position: absolute;
+    width: 50%;  /*why*/
+    height:  50vh;
+}
+
+p:hover{
+    background-color: bisque;
+}

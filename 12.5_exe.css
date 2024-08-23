@@ -1,0 +1,13 @@
+
+
+#data-toolip{
+    position: relative;
+    cursor: pointer;
+}
+
+#data-toolip::after{
+    content: attr(data-toolip);
+    position: absolute;
+    width: 150px;
+
+}

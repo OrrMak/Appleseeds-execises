@@ -1,0 +1,8 @@
+a{
+    text-decoration: none;
+}
+
+a::after{
+    content: attr(href);
+    margin-left: 5px; 
+}
