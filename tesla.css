@@ -1,0 +1,213 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    color: #fff;
+    font-family:sans-serif;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+
+.firstPage{
+    /* position:relative; */
+    background-image: url(./images/image_1_model_3.png);
+    height: 100vh;
+    width: 100%;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.firstPage nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-weight: 300;
+    padding: 1%;  
+    /* background-color: #834c4c;   */
+    position: relative;
+}
+.firstPage header{
+    display: flex;
+    /* font-weight: bold; */
+    flex-basis: 20%;
+    margin-left: 2%;
+    /* background-color: aqua; */
+
+}
+.mainBar h3{
+    letter-spacing: 13px;
+}
+.mainBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 40%;
+    font-size:small;
+    /* background-color: aquamarine; */
+    position:absolute;
+    left: 39%;
+}
+.mainBar li{
+    padding: 0 4%;
+}
+.mainBar a{
+    padding: 12%;
+    font-weight: bold;
+
+} 
+.mainBar a:hover{
+    background-color:rgba(197, 195, 195, 0.7);
+    border-radius: 2px;
+}
+.sideBar{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-basis: 10%;
+    /* background-color: blue; */
+}
+
+.sideBar a:hover{
+    background-color:rgba(197, 195, 195, 0.2);
+    border-radius: 2px;
+}
+ 
+.firstPageText{
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+    /* background-color: #834c4c; */
+}
+.firstPageText h1{
+    font-size: 45px;
+    margin-bottom: 1%;
+}
+.firstPageText a{
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 1%;
+
+}
+.firstPageText h2{
+    font-size: 17px;
+    margin-top: 1%;
+}
+sup{
+    font-weight: lighter;
+    font-size: x-small;
+}
+
+.PageButtons{
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%); /**/
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;   
+    font-size: small;
+    font-weight: bold;
+    /* background-color: #fff; */
+}
+
+.PageButtons a{ 
+    padding: 2% 8%; 
+ } 
+.order{
+    background-color: rgb(72, 110, 193);
+    border-radius: 5px;
+    margin-right: 2%;
+}
+.demo{
+    background-color: rgb(251, 252, 252);
+    border-radius: 7px;
+    color: rgb(36, 35, 35);
+    margin-left: 2%;
+}
+
+
+
+/* SECOND PAGE */
+
+.secondPage{
+    background-image: url(./images/image_2_model_y.png);
+    height: 100vh;
+    width: 100%;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
+    position: relative;
+}
+ 
+.secondPageText{
+    /* background-color: aqua; */
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    /* padding-top: 9%; */
+    position: absolute;
+    top: 7%;
+}
+.secondPageText h1{
+    font-size: 45px;
+    margin-bottom: 1%;
+}
+.secondPageText a{
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px;
+    font-weight: bold;
+    font-size: 26px;
+    margin-bottom: 1%;
+
+}
+.secondPageText h2{
+    font-size: 17px;
+    margin-top: 1%;
+}
+
+/* THIRD PAGE */
+
+.ThirdPage{
+    background-image: url(./images/image_3.png);
+    height: 100vh;
+    width: 100%;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
+    position: relative;
+}
+
+.ThirdPageText{
+    /* background-color: aqua; */
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+    /* padding-top: 9%; */
+    position: absolute;
+    top: 7%;
+}
+.ThirdPageText h1{
+    font-size: 45px;
+    margin-bottom: 1%;
+}
+.ThirdPageText a{
+    display: block;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 1%;
+}
