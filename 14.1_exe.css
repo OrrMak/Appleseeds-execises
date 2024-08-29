@@ -1,0 +1,24 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.box{
+    height: 40vh;
+    width: 40vw;
+    background-color: blue;
+    position: relative;
+}
+
+.box::before{
+    content: '';
+    height: 40vh;
+    width: 40vw;
+    position: absolute;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.box:hover::before {
+    transform: translateX(0%);
+    background-color: lightskyblue;
+}  

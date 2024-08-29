@@ -1,0 +1,104 @@
+
+*{
+    background-color: rgb(20, 19, 19);
+}
+
+.spinners{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 30%;
+}
+
+.spinner1{
+    width:200px;
+    height: 200px;
+    border: 3px solid gray;
+    border-radius: 50%;
+    border-top: 3px solid orange;
+    animation: ibra 3s linear infinite;
+}
+
+@keyframes ibra{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.spinner2{
+    width:200px;
+    height: 200px;
+    border: 3px solid gray transparent;
+    border-radius: 50%;
+    border-top: 3px solid orange;
+    animation: ibrahim 3s linear infinite;
+}
+
+@keyframes ibrahim{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.spinner3{
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+}
+.dot1, .dot2, .dot3 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    animation: sun 1.5s infinite;
+}
+.dot1{
+    animation-delay: 0;
+}
+.dot2{
+    animation-delay: 0.5s;
+}
+.dot3{
+    animation-delay: 1s;
+}
+@keyframes sun{
+    to{
+        background-color: gray;
+    }
+}
+
+
+.spinner4{
+    display: flex;
+    justify-content: space-around;
+    width: 120px;
+}
+.dot11, .dot12, .dot13 {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(207, 104, 6);
+    animation: sun 1.8s infinite;
+}
+.dot11{
+    animation-delay: 0.2;
+}
+.dot12{
+    animation-delay: 0.4s;
+}
+.dot13{
+    animation-delay: 0.6s;
+}
+@keyframes sun{
+    to{
+        background-color: rgb(5, 5, 5);
+    }
+}
