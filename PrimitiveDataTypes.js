@@ -89,15 +89,64 @@ console.log(typeof emptyValue);
 // console.log(noValue);
 console.log(emptyValue);
 
-const num2=10;
+// const num2=10;
 const str2="Hello";
 const bool2=true;
-console.log(`The value of num2 is ${num2} and it's type is ${typeof num2}`);
+// console.log(`The value of num2 is ${num2} and it's type is ${typeof num2}`);
 console.log(`The value of str2 is ${str2} and it's type is ${typeof str2}`);
 console.log(`The value of bool2 is ${bool2} and it's type is ${typeof bool2}`);
 
+// 5 - String concatenation.md
 
+const intro1="My name is Orr";
+const intro2="and I am 30 years old";
+const intro=intro1+" "+intro2;
+console.log(intro);
 
+const fav1="orange";
+const fav2="the sympsons";
+const fav3="tofu";
+const fav=`My favorite color is ${fav1}, I love the movie ${fav2}, and I enjoy eating ${fav3}`
+console.log(fav);
+
+const a=3;
+const b=4;
+const result=a+b;
+console.log(`The sum of a and b is ${result}`)
+
+const currentDay="Monday";
+console.log(`Today is ${currentDay}`)
+
+// 8 - Basic Arithmetic.md
+const num1=8;
+const num2=15;
+const add=num1+num2;
+console.log(add);
+
+const aa=30;
+const bb=12;
+const sub=aa-bb;
+console.log(sub);
+
+const x=7;
+const y=3;
+const multi=aa*bb;
+console.log(multi);
+
+const dividend=20;
+const divisor=4;
+const div=dividend/divisor;
+console.log(div);
+
+const remainder=dividend%divisor;
+console.log(remainder);
+
+const number1=15;
+const number2=25;
+const number3=10;
+console.log((number1+number2+number3)/3);
+
+// 7. Even or Odd Detector: 
 
 
 
