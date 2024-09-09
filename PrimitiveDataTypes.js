@@ -150,6 +150,26 @@ console.log((number1+number2+number3)/3);
 
 
 
+//if
+/* Check age and height
+If age < 15 - print cannot enter
+If age > 15 and height < 110 - print go on kids ride
+If age > 15 and he	igt > 110 - print go on rollercoster
+If sonOfManager = true, print - do whatever*/
+
+const age,height,msg;
+const sonOfManager;
+
+if(age<15){
+    console.log("cannot enter");
+}
+else if (age>15 && height<110){
+    console.log("go on kids ride");
+}
+else if (age>15 && height>110){
+    console.log("go on rollercoster");
+}
+
 
 
 
