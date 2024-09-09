@@ -1,0 +1,52 @@
+#mainItem{
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+    height: 100vh;
+}
+#gallery{
+    grid-column: 1 / span 4;
+    background-color: aqua;
+}
+
+#details{
+    grid-column: 5 / span 4;
+    background-color: rgb(12, 31, 31);
+}
+
+#buy{
+    grid-column: 9 /span 2;
+    background-color: rgb(85, 32, 123);
+}
+#gallery_grid{
+    display: grid;
+    grid-template-columns: 1fr,9fr;
+}
+#narrow_bar{
+    grid-column: 1;
+}
+#big_photo{
+    grid-column: 2;
+}
+#details{
+    width: 80%;
+}
+#details_flex h1{
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+#visit_store{
+    background-color: aliceblue;
+    /* color: #0f1111;; */
+    color: #007185;
+    font-size: 1rem;
+}
+#visit_store:hover{
+    border-bottom:1px solid rgb(176, 126, 33) ;
+    color: rgb(176, 126, 33) ;
+}
+
+/* #item_title::before{
+    border-bottom: 1px solid black;
+} */
