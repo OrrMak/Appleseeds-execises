@@ -114,6 +114,10 @@ console.log(max);
 //10 same as 9
 
 //11 
+let avg="";
 const ratingList=[[8,7,9],[6,8,7],[9,9,10]];
-
+for(let i=0; i<ratingList.length; i++){
+    avg=Math.avg(ratingList[1]);
+    console.log(avg);
+}
 
