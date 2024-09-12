@@ -121,3 +121,8 @@ for(let i=0; i<ratingList.length; i++){
     console.log(avg);
 }
 
+//Array Methods - Extra
+//1
+arrayOfMovieObject=[{title: "Inception", genre: "Action"}, {title: "The Dark Knight",
+    genre: "Action"}, {title: "A Beautiful Mind", genre: "Drama"}];
+    

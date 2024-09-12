@@ -86,3 +86,5 @@ console.log(movies.reverse(movieToFind));
 releaseDatesSorted=[2001,2023,1998,2014];
 console.log(releaseDatesSorted.sort((a,b)=>a-b));
 
+//object.keys() & object.values()
+//for of arrays -- for in objects
