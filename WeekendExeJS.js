@@ -34,13 +34,30 @@ sumOfLowest(exmArray);
 // console.log(integerValue); 
 
 //Ex2.3 - Find the Next Perfect Square
-let num=7;
-console.log(typeof(num));
+// let num=7;
+// console.log(typeof(num));
 
 function perfectSquare(num){
-    // const number=7;
-    if (Number.isInteger(num)) {
-        return console.log('yay!');
+     // Check if num is not an integer
+    if (Number.isInteger(num)===false) {
+        console.log('there is no non-integer n that can create a perfect square.');
       }
+    // Check if num is negative
+    if (num<0) {
+       console.log('there is no true square root of a negative number');
+      }
+    // Check if num has an integer square root
+    if(Number.isInteger(Math.sqrt(num))===false && num >= 0){
+        console.log(-1);
+    }
+    // If num is a perfect square
+    if (Number.isInteger(Math.sqrt(num))){
+        const sq=Math.sqrt(num);
+        console.log(`${sq}`);
+        const nextSq=sq+1;
+        console.log(`${nextSq}`);
+        console.log(Math.pow(nextSq,2));
+    }
+    
 }
-perfectSquare(num);
+perfectSquare(100);
