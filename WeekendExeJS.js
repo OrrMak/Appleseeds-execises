@@ -105,3 +105,39 @@ function centuries(year){
 }
 centuries(1400);
 
+// Ex2.7 - Basic Math
+
+function basicMath(operator, num1, num2){
+    const validhOperators = ['+', '-', '*', '/', '%', '**'];
+    let res;
+
+    if(validhOperators.indexOf(operator)!==-1 && typeof(num1)==="number" && typeof(num2)==="number"){
+        switch (operator){
+            case '+':
+                res=num1+num2;
+                break;
+            case '-':
+                res=num1-num2;
+                break;
+            case '*':
+                res=num1*num2;
+                break;
+            case '/':
+                res=num1/num2;
+                break;
+            case '%':
+                res=num1%num2;
+                break;
+            case '**':
+                res=num1**num2;
+                break;
+        }
+        return console.log(res)
+    }
+
+    else{
+        console.log("value 1 and 2 needs to be numbers, and the operator from the list:'+', '-', '*', '/', '%', '**'")
+    }
+}
+basicMath('0',1,4);
+
