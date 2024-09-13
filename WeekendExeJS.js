@@ -88,3 +88,20 @@ function Summation(n) {
     return console.log(array.reduce((accumulator, currentValue) => accumulator + currentValue,0))
 }
 Summation(4);
+
+// Ex2.6 - Years and Centuries
+function centuries(year){
+    if (Number.isInteger(year)===false){
+        console.log("Please insert a number")
+    }
+    if (year<0){
+        console.log("B.C")
+    }
+    if(Number.isInteger(year) && year>=0){
+        const century=Math.floor((year/100)+1);
+        return console.log(`${century} century`);
+    }
+
+}
+centuries(1400);
+
