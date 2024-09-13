@@ -29,3 +29,18 @@ function sumOfLowest(inputArray){
 sumOfLowest(exmArray);
 
 //Ex2.2 - One and Zero - Binary
+// const binaryArray = [1, 0, 1, 1];
+// const integerValue = parseInt(binaryArray.join(''), 2);
+// console.log(integerValue); 
+
+//Ex2.3 - Find the Next Perfect Square
+let num=7;
+console.log(typeof(num));
+
+function perfectSquare(num){
+    // const number=7;
+    if (Number.isInteger(num)) {
+        return console.log('yay!');
+      }
+}
+perfectSquare(num);
