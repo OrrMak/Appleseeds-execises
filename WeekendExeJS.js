@@ -146,32 +146,34 @@ function growth(p0,growthPrecent,staticChange,p){
     const yearsCount=1;
     const newPplCount=p0;
     const PositivePrecentChange=p0*(growthPrecent/100); 
-    console.log(PositivePrecentChange);
+    console.log(`this is the change in precent - ${PositivePrecentChange}`);
 
     if((Number.isInteger(p0) && p0>0) && (Number.isInteger(p) && p>0) && 
         Number.isInteger(staticChange)) {
             
+            // case growthPrecent is not null
             if(typeof(growthPrecent) === "nuber" && growthPrecent>0)  {    
+                
+                if(staticChange<0){
                 //if the number of people leaving is bigger than the growth rate 
-                if(PositivePrecentChange<staticChange){
-                    console.log("Popualtion count will decrease each year")
+                    if(PositivePrecentChange<Math.abs(staticChange)){
+                    console.log("Popualtion count will decrease each year")}
+                //if number of people leaving is EQUAL TO growth rate 
+                    if(PositivePrecentChange===Math.abs(staticChange)){
+                        console.log("Popualtion count stay the same")}
                 }
-                //IF number of people leaving is EQUAL TO growth rate 
-                if(PositivePrecentChange===staticChange){
-                    console.log("Popualtion count stay the same")
-                }
-                //calculation of the years till wantes p
+                //calculation of the years till p
                 if(PositivePrecentChange>staticChange){
-                    for(yearsCount; yearsCount<=100; yearsCount++){
-                        for(newPplCount; newPplCount<p; newPplCount=+(PositivePrecentChange+staticChange)){
+                    for(yearsCount; yearsCount<=100 || newPplCount<p; yearsCount++){
+                        newPplCount=+(PositivePrecentChange+staticChange)
                             console.log(newPplCount);
                             if(newPplCount===p){
-                                console.log(yearsCount);
+                                console.log(`it'll take ${yearsCount} years`);}
                             }
                             if(yearsCount===100){
-                            console.log("It'll take at list 100 years");
-                        }}}
-            }}}}
+                            console.log("It'll take at list 100 years");}
+                }
+            }}}
  //case its more than a hunderes years stop
  // else {
 // console.error("Invalid input parameters.")
