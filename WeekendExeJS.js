@@ -142,50 +142,93 @@ function basicMath(operator, num1, num2){
 basicMath('0',1,4);
 
 // Ex3.1 - Growth Of population
-function growth(p0,growthPrecent,staticChange,p){
-
-    let yearsCount=0;
-    let newPplCount=p0;
-
-    if(Number.isInteger(p0) && p0>0 && Number.isInteger(p) && p>0 && 
-    Number.isInteger(staticChange) && growthPrecent>0) {
+function growth(p0,growthPercent,staticChange,p){
             
-        const PositivePrecentChange=newPplCount*(growthPrecent/100); 
-        console.log(`this is the change in count of ppl - ${PositivePrecentChange}`); // check***
-
-            // case growthPrecent is not null
-            if(typeof(growthPrecent) === "number")  {    
+            let yearsCount = 0;
+            let newPplCount = p0;
+        
+            // Check if inputs are valid
+            if (
+                Number.isInteger(p0) && p0 > 0 &&
+                Number.isInteger(p) && p > 0 &&
+                Number.isInteger(staticChange)
+            ) {
+                // If growthPercent is null, treat it as 0
+                const effectiveGrowthPercent = (growthPercent === null ? 0 : growthPercent);
                 
-                if(staticChange<0){
-                                             //if the number of people leaving is bigger than the growth rate 
-                    if(PositivePrecentChange<Math.abs(staticChange)){
-                    console.log("Popualtion count will decrease each year")}
-                                            //if number of people leaving is EQUAL TO growth rate 
-                    if(PositivePrecentChange===Math.abs(staticChange)){
-                        console.log("Popualtion count stay the same")}
+                if (typeof effectiveGrowthPercent !== 'number' || effectiveGrowthPercent < 0) {
+                    console.error("Invalid growthPercent value. It should be a positive number or null.");
+                    return;
                 }
 
-                //calculation of the years till p             
-                    while(newPplCount<p){
-                            newPplCount += PositivePrecentChange+staticChange;
-                            console.log(newPplCount); //check ****
-                            yearsCount++
-                            if(yearsCount>100){
-                            console.log("It'll take at list 100 years");
-                            return;
-                            }
+                if(p<p0){
+                    console.log("Future population entered needs to be greater than current");
+                    return;
+                }
+        
+                const positivePercentChange = newPplCount * (effectiveGrowthPercent / 100);
+        
+                console.log(`Effective growth rate: ${effectiveGrowthPercent}%`); // Check ***
+                console.log(`Change in count of people per year: ${positivePercentChange}`); // Check ***
+        
+                if (effectiveGrowthPercent === 0) {
+                    // Handle case where growthPercent is null or 0
+                    if (staticChange < 0) {
+                        console.log("Population count will decrease each year");
+                        return; // Population will decrease and never reach target
+                    }
+                    if (staticChange === 0) {
+                        console.log("Population count stays the same");
+                        return; // Population will stay the same
+                    }
+                    // Static change is positive
+                    while (newPplCount < p) {
+                        newPplCount += staticChange;
+                        console.log(newPplCount); // Check ****
+                        yearsCount++;
+                        if (yearsCount > 100) {
+                            console.log("It'll take at least 100 years");
+                            return; // Exceeded 100 years
+                        }
+                    }
+                    console.log(`It'll take ${yearsCount} years`);
+                } else {
+                    // Handle case where growthPercent is a positive number (not null or 0)
+                    if (staticChange < 0) {
+                        if (positivePercentChange <= Math.abs(staticChange)) {
+                            console.log("Population count will decrease each year");
+                            return; // Population will decrease and never reach target
+                        }
+                        if (positivePercentChange === Math.abs(staticChange)) {
+                            console.log("Population count stays the same");
+                            return; // Population will stay the same
+                        }
+                    }
+        
+                    // Calculate years until population reaches target p
+                    while (newPplCount < p) {
+                        newPplCount += positivePercentChange + staticChange;
+                        console.log(newPplCount); // Check ****
+                        yearsCount++;
+                        if (yearsCount > 100) {
+                            console.log("It'll take at least 100 years");
+                            return; // Exceeded 100 years
+                        }
                     }
                     console.log(`It'll take ${yearsCount} years`);
                 }
-            if(typeof(growthPrecent) === "null")  {
-                if (staticChange<0){
-                    console.log("No growth Precent value, the Popualtion count will decrease each year")}
-                if (staticChange>0){
-                    console.log("No growth Precent value, the Popualtion count will increase each year")}
-             }
-           
-    else {
-        console.error("Invalid input parameters.")
-                }}}
+            } else {
+                console.error("Invalid input parameters.");
+            }
+        }
+        
+        // Test cases
+        // growth(1500, 5, 100, 5000);   
+        // Valid growthPercent
+        // growth(1500, null, 100, 5000); 
+        // GrowthPercent is null
+        // growth(1500, 0, 100, 5000);  
+         // GrowthPercent is 0
 
-growth(1500, 5, 100, 5000)
+         growth(1500, 5, 100, 100);  
+         // GrowthPercent is 0
