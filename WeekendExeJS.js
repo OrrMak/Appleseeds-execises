@@ -232,3 +232,39 @@ function growth(p0,growthPercent,staticChange,p){
 
          growth(1500, 5, 100, 100);  
          // GrowthPercent is 0
+
+//Ex3.2 - People on the Bus
+
+function PeopleLeftOTheBus(arrayInt) {
+    
+    //Valid values integers. 
+    const intCheck = arrayInt.every(row => row.every(value => Number.isInteger(value) && value >= 0));
+
+    if(intCheck){
+          
+        arrayInt[0][1]=0; 
+        arrayInt[array.length-1][0]=0; 
+        
+        let countOff=0;
+        let countOn=0;
+        let CurrentOn=0;
+
+        for(i=0; i<arrayInt.length; i++){
+            for(j=0; j<arrayInt.length; j++){
+                countOn += arrayInt[j][0]
+                console.log(`countOn=${countOn}`)
+                countOff = arrayInt[0][j]
+                console.log(`countOn=${countOff}`)
+                CurrentOn=countOn-countOff;
+                console.log(`CurrentOn=${CurrentOn}`)
+            }
+        }
+        return(CurrentOn);
+    }
+    else{
+        return console.log("the array contains non-integers values")
+    }
+}
+// function([3,0],[5,1],[6,5],[4,3],[8,6][5,2][1,0],[0,6],[8,2],last bus stop is not represented)
+
+//checj that amount of people coming of are not greater than the people on the bus. 
