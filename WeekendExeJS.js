@@ -281,5 +281,34 @@ function trim(string){
 }
 trim("Hello")
 
+// Ex5.2 - String Repeat
+function stringRepeat(n,string){
 
+    if(Number.isInteger(n) && n>0 && typeof(string)==="string"){
+        let res='';
+        for(i=0; i<n; i++){
+            res += string
+            console.log(res)
+        }
+        return console.log(res);
+    }
+    else{
+        console.log("Incorrect Input")
+    }
+}
+stringRepeat(3,"Hello")
+// console.log(typeof("Hello"))
 
+//Ex5.3 - To Camel Case
+// function toCamel(string){
+//     const arr=string.split('')
+
+//     while(string.indexOf('-')!==-1){
+//         let index=arr.indexOf('-'); //fins the index of the first -
+//         arr.splice(index,1);
+//         arr[index]=arr[index].toUpperCase();
+//     }
+//     return console.log(arr.join(''));
+// }
+
+// toCamel("the-stealth-warrior");
