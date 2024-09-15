@@ -143,39 +143,49 @@ basicMath('0',1,4);
 
 // Ex3.1 - Growth Of population
 function growth(p0,growthPrecent,staticChange,p){
-    const yearsCount=1;
-    const newPplCount=p0;
-    const PositivePrecentChange=p0*(growthPrecent/100); 
-    console.log(`this is the change in precent - ${PositivePrecentChange}`);
 
-    if((Number.isInteger(p0) && p0>0) && (Number.isInteger(p) && p>0) && 
-        Number.isInteger(staticChange)) {
+    let yearsCount=0;
+    let newPplCount=p0;
+
+    if(Number.isInteger(p0) && p0>0 && Number.isInteger(p) && p>0 && 
+    Number.isInteger(staticChange) && growthPrecent>0) {
             
+        const PositivePrecentChange=newPplCount*(growthPrecent/100); 
+        console.log(`this is the change in count of ppl - ${PositivePrecentChange}`); // check***
+
             // case growthPrecent is not null
-            if(typeof(growthPrecent) === "nuber" && growthPrecent>0)  {    
+            if(typeof(growthPrecent) === "number")  {    
                 
                 if(staticChange<0){
-                //if the number of people leaving is bigger than the growth rate 
+                                             //if the number of people leaving is bigger than the growth rate 
                     if(PositivePrecentChange<Math.abs(staticChange)){
                     console.log("Popualtion count will decrease each year")}
-                //if number of people leaving is EQUAL TO growth rate 
+                                            //if number of people leaving is EQUAL TO growth rate 
                     if(PositivePrecentChange===Math.abs(staticChange)){
                         console.log("Popualtion count stay the same")}
                 }
-                //calculation of the years till p
-                if(PositivePrecentChange>staticChange){
-                    for(yearsCount; yearsCount<=100 || newPplCount<p; yearsCount++){
-                        newPplCount=+(PositivePrecentChange+staticChange)
-                            console.log(newPplCount);
-                            if(newPplCount===p){
-                                console.log(`it'll take ${yearsCount} years`);}
-                            }
-                            if(yearsCount===100){
-                            console.log("It'll take at list 100 years");}
-                }
-            }}}
- //case its more than a hunderes years stop
- // else {
-// console.error("Invalid input parameters.")
 
-growth(1500,5,100,5000)
+                //calculation of the years till p             
+                    while(newPplCount<p){
+                            newPplCount += PositivePrecentChange+staticChange;
+                            console.log(newPplCount); //check ****
+                            yearsCount++
+                            if(yearsCount>100){
+                            console.log("It'll take at list 100 years");
+                            return;
+                            }
+                    }
+                    console.log(`It'll take ${yearsCount} years`);
+                }
+            if(typeof(growthPrecent) === "null")  {
+                if (staticChange<0){
+                    console.log("No growth Precent value, the Popualtion count will decrease each year")}
+                if (staticChange>0){
+                    console.log("No growth Precent value, the Popualtion count will increase each year")}
+             }
+           
+    else {
+        console.error("Invalid input parameters.")
+                }}}
+
+growth(1500, 5, 100, 5000)
