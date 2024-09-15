@@ -266,4 +266,20 @@ function PeopleLeftOTheBus(arrayInt) {
 }
     
 
-console.log(PeopleLeftOTheBus([[10, 0], [3, 5], [10, 8]])); // Output should be 5
+// console.log(PeopleLeftOTheBus([[10, 0], [3, 5], [10, 8]])); 
+
+// Ex4.1 - Fibonacci
+// Ex4.2 - Tribonacci
+
+// Ex5.1 - trimming string
+function trim(string){
+    if(typeof(string)!=="string"){
+        console.log("this functions applys only for strings")
+        return;
+    }
+    return console.log(string.slice(1,-1));
+}
+trim("Hello")
+
+
+
