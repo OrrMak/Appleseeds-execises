@@ -84,3 +84,16 @@ avg(movies)
 //5
 const mergedMovies=Object.assign({}, movies[0], movies[1]);
 console.log(mergedMovies)
+//how to prevent further changes inside an object? 
+// [1] Object.freeze() is a built-in method that makes an object immutable. Once an object is frozen, you cannot add, delete, or modify its properties. However, this only applies to the object's properties, not to nested objects or arrays.
+// [2] Object.seal() prevents new properties from being added to the object and marks all existing properties as non-configurable. However, it allows modification of existing properties.
+// [3] Object.preventExtensions() prevents new properties from being added to an object, but existing properties can still be modified or deleted.
+
+//6 
+const movieDetails= {
+    title: "Inception",
+    director: "Christopher Nolan",
+    releaseYear: 2010,
+    ratings: [8,9,9.5,8.5]
+};
+
