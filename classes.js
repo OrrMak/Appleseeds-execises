@@ -73,3 +73,22 @@ class Movie extends Media{
 
 const movie1=new Movie('matrix',120, 'biili', 'drama');
 console.log(movie1.displayDetails());
+
+class Series extends Movie{
+    #seasons;
+    constructor(title,duration,seasons){
+        super(title,duration);
+        this.#seasons=seasons;
+    }
+
+    getSeasons(){
+        return this.#seasons;
+    }
+    displayDetails(){
+        return `${super.displayDetails()}, seaons:${this.#seasons}}`
+    }
+}
+const seasons1=new Series('the marix',120,0);
+console.log(seasons1.getSeasons());
+console.log(seasons1.displayDetails());
+
