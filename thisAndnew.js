@@ -1,6 +1,7 @@
 //What is an entity in object-oriented programming? In object-oriented programming (OOP), an entity is often called an object. Objects encapsulate both data and behaviors, allowing us to model real-world entities and interact with them through methods and properties.
 //In JavaScript, methods are used to manipulate objects. They are written in the same way as functions, but they are defined within the object.
 //1
+
 const movieTheater={
     movies: [],
     seats: {}, 
@@ -19,12 +20,27 @@ const movieTheater={
     //     2: false,  // Seat 2 in row B is available
     //     3: false   // Seat 3 in row B is available
     // }
-
+    seatGenerator(movieTitle,NumOfRows,NumOfSeats){
+        
+    },
     addMovie(movie){
-        //Adds a new movie to the theater
+        //Adds a new movie to the theater.
+        if (this.movies.indexOf(movie)===-1){
+            return this.movies.push(movie); 
+        }
+        else{
+            console.log(`${movie} already exists`)
+        }
     },
     removeMovie(movieTitle){
         //Removes a movie by title
+        if (this.movies.indexOf(movieTitle)!==-1){
+            removeIndex=this.movies.indexOf(movieTitle);
+            return this.movies.splice(removeIndex,1);
+        }
+        else{
+            console.log(`${movieTitle} does not exists`)
+        }
     },
     bookSeat(seatNumber){
         // Books a seat.
@@ -65,12 +81,20 @@ function Movie(title, duration, ticketPrice){
     }
 }
 
+const movie1=new Movie('the matrix',120, 12)
+console.log(movie1)
+console.log(movie1.getInfo())
+console.log(movie1.calculateRevenue(34))
+console.log(movie1)
+console.log(movie1.updateTicketPrice(11))
+console.log(movie1)
+
 //3
-function Seat(seatNumber,row, movieTheater){
+function Seat(seatNumber,row){
     this.seatNumber=seatNumber;
     this.row=row;
     this.status='available';
-    this.movieTheater=movieTheater;
+    // this.movieTheater=movieTheater;
 
     //methods
     this.isOccupied=function(){
