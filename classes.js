@@ -76,8 +76,8 @@ console.log(movie1.displayDetails());
 
 class Series extends Movie{
     #seasons;
-    constructor(title,duration,seasons){
-        super(title,duration);
+    constructor(title,duration,director,genre,seasons){
+        super(title, duration, director, genre);
         this.#seasons=seasons;
     }
 
@@ -88,7 +88,7 @@ class Series extends Movie{
         return `${super.displayDetails()}, seaons:${this.#seasons}}`
     }
 }
-const seasons1=new Series('the marix',120,0);
+const seasons1=new Series('the marix',120,'billi',0);
 console.log(seasons1.getSeasons());
 console.log(seasons1.displayDetails());
 
