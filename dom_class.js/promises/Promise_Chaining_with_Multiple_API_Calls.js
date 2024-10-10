@@ -1,4 +1,9 @@
-
+const users=document.getElementById('users');
+const divContainer=document.getElementsByClassName('container')[0];
+const loadingDiv=document.createElement('div');
+loadingDiv.classList.add('loading');
+divContainer.insertBefore(loadingDiv, users);
+loadingDiv.textContent = 'Loading...';
 
 const usersData=fetch('https://jsonplaceholder.typicode.com/users')
     .then(response=>{
@@ -8,7 +13,8 @@ const usersData=fetch('https://jsonplaceholder.typicode.com/users')
         return response.json();
     })
     .then(usersData=>{
-        const users=document.getElementById('users');
+        // const users=document.getElementById('users');
+        divContainer.removeChild(loadingDiv);
 
         usersData.forEach(element => {
             const userDiv=document.createElement('div');
@@ -19,6 +25,15 @@ const usersData=fetch('https://jsonplaceholder.typicode.com/users')
                 <p><strong>Email:</strong> ${element.email}</p>
                 <div class="posts"></div>`
 
+            const postContainer=userDiv.querySelector('.posts'); 
+            const postHeader=document.createElement('h4')
+            postContainer.appendChild(postHeader)
+            
+            const loadingPostsDiv=document.createElement('div');
+            loadingPostsDiv.classList.add('loadingPosts');
+            postContainer.insertBefore(loadingPostsDiv, postHeader);
+            loadingPostsDiv.textContent = 'Loading Posts...';
+            
             fetch(`https://jsonplaceholder.typicode.com/posts?userId=${element.id}`)
                 .then(response=>{
                     if(!response.ok){
@@ -29,10 +44,12 @@ const usersData=fetch('https://jsonplaceholder.typicode.com/users')
                 })
                 
                 .then(postsData=>{
-                    const postContainer=userDiv.querySelector('.posts'); //!!
-                    const postHeader=document.createElement('h2')
-                    postContainer.appendChild(postHeader)
-                        
+                    // const postContainer=userDiv.querySelector('.posts'); 
+                    // const postHeader=document.createElement('h4')
+                    // postContainer.appendChild(postHeader)
+                    postContainer.removeChild(loadingPostsDiv);
+                    postHeader.innerText='Posts:'
+                                            
                     postsData.forEach(el => {
                         const postDiv=document.createElement('div')
                         postDiv.classList.add('post')
